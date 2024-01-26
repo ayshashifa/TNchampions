@@ -1,0 +1,84 @@
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  height: 50px;
+}
+
+.err {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+
+.e-star {
+  color: red;
+}
+
+.disabled-select {
+  background: #ccc;
+  pointer-events: none;
+}
+
+.input-error {
+  color: red;
+  color: red;
+  position: absolute;
+  font-size: 12px;
+}
+.submit-btn {
+  color: #000000;
+  padding: 10px 50px;
+  border-radius: 55px;
+  border: none;
+  background: #ffc746;
+}
+
+.bg {
+  background: #f6f0e0;
+}
+
+.disable-btn {
+  background: #ccc;
+  pointer-events: none;
+}
+
+.modal-submit {
+  color: #000000;
+  padding: 10px 50px;
+  border-radius: 55px;
+  border: none;
+  background: #ffc746;
+}
+.active-tab {
+  .active {
+    background: #7f4b1e !important;
+    color: #fff !important;
+  }
+}
+.nav-link {
+  cursor: pointer;
+}
+.link-primary{
+  cursor: pointer;
+}
+.userbox{
+  background-color: #f6f0e0;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #7f4b1e;
+  font-weight: 700;
+
+}
+.userbox:hover{
+  background-color: #7f4b1e;
+  color: white;
+  cursor: pointer;
+}
+h4{
+  color: #7f4b1e;
+  font-size: 20px;
+}

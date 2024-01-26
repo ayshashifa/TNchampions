@@ -1,0 +1,635 @@
+<app-header
+  class="bg-primary"
+  singleImege="/assets/gallery-img/img5.jpg"
+></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding: unset">
+      <img
+        src="/assets/gallery-img/img5.jpg"
+        alt=""
+        width="100%"
+        height="360px"
+        class="img-banner"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg">
+  <div class="row mx-5 pt-4">
+    <div class="col-md-12 text-center">
+      <img
+        src="{{ userData1?.photo }}"
+        alt="user image"
+        class="mb-2"
+        width="80px"
+        height="80px"
+      />
+    </div>
+    <div class="col-md-4">
+      <p>Name: {{ userData1?.name }}</p>
+    </div>
+    <div class="col-md-4">
+      <p>Email: {{ userData1?.emailid }}</p>
+    </div>
+    <div class="col-md-4">
+      <p>Contact: {{ userData1?.mobile_no }}</p>
+    </div>
+  </div>
+</div>
+
+<form class="bg" [formGroup]="form">
+  <div class="container-fluid" style="border-radius: 21px">
+    <div class="row mx-5">
+      <div class="col-md-12 mt-3">
+        <h2>Requirement Submission Form</h2>
+      </div>
+      <!-- Type of Requirement -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Type of Requirement <span class="e-star">*</span></label>
+          <div class="select-container">
+            <select formControlName="type_requirement" class="form-control">
+              <option value="" disabled>Select Type of Requirement</option>
+              <option value="Cash">Cash</option>
+              <option value="Equipment ">Equipment</option>
+              <option value="Others">Others</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+            <div class="input-error" *ngIf="getError('type_requirement')">
+              <span>This field is required</span>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="form.get('type_requirement').value === 'Cash'">
+          <div class="form-group">
+            <label>Enter the Amount</label>
+            <input
+              type="text"
+              formControlName="type_requirement_details"
+              class="form-control"
+              placeholder="₹ 0.00"
+            />
+          </div>
+        </div>
+
+        <div *ngIf="form.get('type_requirement').value === 'Equipment '">
+          <div class="form-group">
+            <label>Enter Equipment </label>
+            <textarea
+              formControlName="type_requirement_details"
+              class=""
+            ></textarea>
+          </div>
+        </div>
+
+        <div *ngIf="form.get('type_requirement').value === 'Others'">
+          <div class="form-group">
+            <label>Enter Others Description</label>
+            <textarea
+              formControlName="type_requirement_details"
+              class=""
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- Purpose -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Purpose <span class="e-star">*</span></label>
+          <div class="select-container">
+            <select formControlName="purpose" class="form-control">
+              <option value="" disabled>Select Type of purpose</option>
+              <option value="Training">Training</option>
+              <option value="Event Participation">Event Participation</option>
+              <option value="Others">Others</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+            <div class="input-error" *ngIf="getError('purpose')">
+              <span>This field is required</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="form-group"
+          *ngIf="
+            form.get('purpose').value === 'Training' ||
+            form.get('purpose').value === 'Event Participation' ||
+            form.get('purpose').value === 'Others'
+          "
+        >
+          <label>Describe the Purpose<span class="e-star">*</span></label>
+          <textarea formControlName="purpose_description" class=""></textarea>
+          <div class="input-error" *ngIf="getError('additionalInfo')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <!--Purpose proof  Attachment  -->
+        <div class="form-group" *ngIf="form.get('purpose').value === 'Others'">
+          <label for="">Purpose proof Attachment</label>
+          <div class="">
+            <input
+              type="file"
+              class="file-input"
+              formControlName="other_purpose_attachment"
+              (change)="onotherattachementChange($event)"
+              #purpose
+              style="display: none"
+              accept=".png,.pdf,.jpeg,.jpg"
+            />
+            <div class="form-control">
+              <div class="filebtn btn btn-primary" (click)="purpose.click()">
+                Upload <i class="fa fa-cloud-upload"></i>
+              </div>
+              <span>{{ other_purpose_attachments }}</span>
+            </div>
+            <div *ngIf="!other_purpose_attachments">
+              <small class="text-danger" *ngIf="maxFileSizeErrorimg2">{{
+                maxFileSizeErrorimg2
+              }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documents for Verification -->
+      <div class="col-md-12 mt-3">
+        <h2>Documents for Verification</h2>
+      </div>
+      <div class="col-md-6">
+        <!-- Birth Certificate -->
+        <div class="form-group">
+          <label class="col-lg-6 form-label"
+            >Birth Certificate<span class="e-star">*</span></label
+          >
+          <div class="">
+            <input
+              type="file"
+              class="file-input"
+              formControlName="birth_certificate"
+              (change)="onBirthCertificateChange($event)"
+              #Birth
+              style="display: none"
+              accept=".png,.pdf,.jpeg,.jpg"
+            />
+            <div class="form-control">
+              <div class="filebtn btn btn-primary" (click)="Birth.click()">
+                Upload <i class="fa fa-cloud-upload"></i>
+              </div>
+              <span>{{ birth_certificates }}</span>
+            </div>
+            <div *ngIf="!birth_certificates">
+              <small class="text-danger" *ngIf="maxFileSizeErrorimg2">{{
+                maxFileSizeErrorimg2
+              }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Aadhaar Copy               accept=".pdf,.Doc"
+-->
+        <div class="form-group">
+          <label class="col-lg-6 form-label"
+            >Aadhaar Copy<span class="e-star">*</span></label
+          >
+          <div class=" ">
+            <input
+              accept=".png,.pdf,.jpeg,.jpg"
+              type="file"
+              class="file-input"
+              formControlName="aadhaar_copy"
+              (change)="onAadhaarCopyChange($event)"
+              #aadhaar
+              style="display: none"
+            />
+            <div class="form-control">
+              <div class="filebtn btn btn-primary" (click)="aadhaar.click()">
+                Upload <i class="fa fa-cloud-upload"></i>
+              </div>
+              <span>{{ aadhaar_copys }}</span>
+            </div>
+            <div *ngIf="!aadhaar_copys">
+              <small class="text-danger" *ngIf="maxFileSizeErrorimg3">{{
+                maxFileSizeErrorimg3
+              }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details of Sports Achievements -->
+      <div class="col-md-12 mt-1">
+        <h2>Details of Sports Achievements</h2>
+      </div>
+      <div class="col-md-12 mt-1">
+        <div formArrayName="achievements">
+          <div
+            *ngFor="
+              let achievement of form.get('achievements').controls;
+              let i = index
+            "
+            class="achievement"
+          >
+            <div>
+              <h2>
+                Achievement {{ i + 1 }}
+                <button
+                  class="btn btn-danger btn-sm"
+                  (click)="removeAchievement(i)"
+                  *ngIf="i != 0"
+                >
+                  Remove
+                </button>
+              </h2>
+            </div>
+
+            <div [formGroupName]="i" class="row">
+              <div class="col-md-6">
+                <!-- Name of the Event -->
+                <div class="form-group">
+                  <label for="event_name"
+                    >Name of the Event <span class="e-star">*</span></label
+                  >
+                  <div class="select-container">
+                    <select class="form-control" formControlName="event_name">
+                      <option value="" disabled>Select Event</option>
+                      <option
+                        *ngFor="let item of dropdownData"
+                        [value]="item.name"
+                      >
+                        {{ item.name }}
+                        <ng-container *ngIf="item.type">
+                          ({{ item.type }})</ng-container
+                        >
+                      </option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div
+                    class="input-error"
+                    *ngIf="
+                      form.get('achievements').controls[i].event_name?.errors
+                    "
+                  >
+                    <span>This field is required</span>
+                  </div>
+                </div>
+                <!-- Discipline -->
+                <!-- 
+                <div class="form-group">
+                  <label>Discipline <span class="e-star">*</span></label>
+                  <div class="select-container">
+                    <select
+                      formControlName="discipline"
+                      class="form-control"
+                      (change)="onDisciplineChange(achievement)"
+                    >
+                      <option value="" disabled>Select Discipline</option>
+                      <option
+                        *ngFor="let discipline of disciplines"
+                        [value]="discipline"
+                      >
+                        {{ discipline }}
+                      </option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="input-error" *ngIf="getError('discipline')">
+                    <span>This field is required</span>
+                  </div>
+                </div>
+                <div *ngIf="customDisciplineInputVisible" class="form-group">
+                  <label for="customDiscipline">Other Discipline</label>
+                  <textarea
+                    id="customDiscipline"
+                    name="customDiscipline"
+                    [(ngModel)]="customDiscipline"
+                    class=""
+                    formControlName="customDiscipline" 
+                  ></textarea>
+                </div>
+              </div>  -->
+
+                <!--  -->
+
+                <div class="form-group">
+                  <label>Discipline <span class="e-star">*</span></label>
+                  <div class="select-container">
+                    <select
+                      formControlName="discipline"
+                      class="form-control"
+                      (change)="onDisciplineChange(achievement)"
+                    >
+                      <option value="" disabled>Select Discipline</option>
+                      <option
+                        *ngFor="let discipline of disciplines"
+                        [value]="discipline"
+                      >
+                        {{ discipline }}
+                      </option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="input-error" *ngIf="getError('discipline')">
+                    <span>This field is required</span>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="achievement.get('discipline').value === 'Other'"
+                  class="form-group"
+                >
+                  <label for="customDiscipline">Other Discipline</label>
+                  <textarea
+                    id="customDiscipline"
+                    name="customDiscipline"
+                    [(ngModel)]="customDiscipline"
+                    class=""
+                    formControlName="customDiscipline"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <!-- Level -->
+                <div class="form-group">
+                  <label>Level <span class="e-star">*</span></label>
+                  <div class="select-container">
+                    <select formControlName="level" class="form-control">
+                      <option value="" disabled>Select Level</option>
+                      <option value="International">International</option>
+                      <option value="National">National</option>
+                      <option value="State">State</option>
+                      <option value="District">District</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="input-error" *ngIf="getError('level')">
+                      <span>This field is required</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class=""
+                    >Proof of Achievement (Upload)<span class="e-star"
+                      >*</span
+                    ></label
+                  >
+                  <div class="">
+                    <input
+                      type="file"
+                      class="file-input"
+                      formControlName="proof_achieve"
+                      (change)="onProofAchieveChangeArray($event, i)"
+                      #proofachieve
+                      style="display: none"
+                      accept=".png,.pdf,.jpeg,.jpg"
+                    />
+                    <div class="form-control">
+                      <div class="filebtn btn" (click)="proofachieve.click()">
+                        Upload <i class="fa fa-cloud-upload"></i>
+                      </div>
+                      <span>{{ proof_achieves_array[i] }}</span>
+                    </div>
+                  </div>
+                  <div *ngIf="!proof_achieves_array[i]">
+                    <small class="text-danger" *ngIf="maxFileSizeErrorimg">{{
+                      maxFileSizeErrorimg
+                    }}</small>
+                  </div>
+                </div>
+
+                <!-- <div class="form-group">
+                  <label class=""
+                    >Proof of Achievement (Upload)<span class="e-star"
+                      >*</span
+                    ></label
+                  >
+                  <div class="">
+                    <input
+                      type="file"
+                      class="file-input"
+                      formControlName="proof"
+                      (change)="onProofAchieveChangeArray($event, i)"
+                      #proofachieve
+                      style="display: none"
+                      accept=".png,.pdf,.jpeg,.jpg"
+                    />
+                    <div class="form-control">
+                      <div class="filebtn btn" (click)="proofachieve.click()">
+                        Upload <i class="fa fa-cloud-upload"></i>
+                      </div>
+                      <span>{{ proof_achieves_array[i] }}</span>
+                    </div>
+                  </div>
+                  <div *ngIf="!proof_achieves_array[i]">
+                    <small class="text-danger" *ngIf="maxFileSizeErrorimg">{{
+                      maxFileSizeErrorimg
+                    }}</small>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-success"
+          (click)="addAchievement()"
+          *ngIf="form.get('achievements').controls.length < 3"
+        >
+          Add Achievement
+        </button>
+      </div>
+
+      <!-- Bank Details -->
+      <div class="col-md-12 mt-3">
+        <h2>Bank Details</h2>
+      </div>
+      <div class="col-md-6">
+        <!-- Account Holder Name -->
+        <div class="form-group">
+          <label
+            >Name of the Account Holder <span class="e-star">*</span></label
+          >
+          <input
+            type="text"
+            formControlName="name_acc_holder"
+            class="form-control"
+            placeholder="Name of the Account Holder"
+          />
+          <div class="input-error" *ngIf="getError('name_acc_holder')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Bank Name -->
+        <div class="form-group">
+          <label>Bank Name <span class="e-star">*</span></label>
+          <input
+            type="text"
+            formControlName="bank_name"
+            class="form-control"
+            placeholder="Bank Name"
+          />
+          <div class="input-error" *ngIf="getError('bank_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Account Number -->
+        <div class="form-group">
+          <label>Account Number <span class="e-star">*</span></label>
+          <input
+            type="text"
+            (keypress)="numberOnly($event)"
+            formControlName="account_no"
+            class="form-control"
+            placeholder="Account Number"
+          />
+          <div class="input-error" *ngIf="getError('account_no')">
+            <span>This field is required</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Branch -->
+        <div class="form-group">
+          <label>Branch <span class="e-star">*</span></label>
+          <input
+            type="text"
+            formControlName="branch_name"
+            class="form-control"
+            placeholder="Branch"
+          />
+          <div class="input-error" *ngIf="getError('branch_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- IFSC Code -->
+        <div class="form-group">
+          <label>IFSC Code <span class="e-star">*</span></label>
+          <input
+            type="text"
+            formControlName="ifsc_code"
+            class="form-control"
+            placeholder="IFSC Code"
+          />
+          <div class="input-error" *ngIf="getError('ifsc_code')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Upload Proof -->
+        <div class="form-group">
+          <label class="col-lg-6 form-label"
+            >Upload Proof<span class="e-star">*</span></label
+          >
+          <div class="">
+            <input
+              type="file"
+              class="file-input"
+              formControlName="upload_proof"
+              (change)="onUploadProofChange($event)"
+              #uploadProofInput
+              style="display: none"
+              accept=".png,.pdf,.jpeg,.jpg"
+            />
+            <div class="form-control">
+              <div
+                class="filebtn btn btn-primary"
+                (click)="uploadProofInput.click()"
+              >
+                Upload <i class="fa fa-cloud-upload"></i>
+              </div>
+              <span>{{ upload_proofs }}</span>
+            </div>
+            <div *ngIf="!upload_proofs">
+              <small class="text-danger" *ngIf="maxFileSizeErrorimg1">{{
+                maxFileSizeErrorimg1
+              }}</small>
+            </div>
+          </div>
+        </div>
+        <!-- <label for="confirm-password" class="col-lg-6 form-label">upload_proof</label>
+        <div class="col-lg-6">
+          <input type="file" class="file-input" accept=".xlsx,.docx,.ppt,.pdf" formControlName="upload_proof"
+            (change)="onUploadProofChange($event)" #upload_proof>
+          <div class="file-upload">
+            <div class="filebtn btn btn-primary" (click)="upload_proof.click()">
+              Upload <i class="fa fa-cloud-upload"></i>
+            </div>
+            {{upload_proof || "No file uploaded yet."}}
+          </div>
+        </div> -->
+        <!-- <div class="form-group">
+          <label for="pdf">Upload Proof<span class="e-star">*</span></label>
+          <input
+            type="file"
+            formControlName="upload_proof"
+            class="form-control"
+            accept="application/pdf"
+            id="pdf"
+            (change)="onFileSelectedpdf1($event)"
+          />
+          <small class="text-danger" *ngIf="show1">
+            Maximum file size is 3 MB
+          </small>
+          <small
+            class="text-danger"
+            *ngIf="maxPdfSizeError1 && maxFileSizeErrorVisible1"
+            >{{ maxPdfSizeError1 }}</small
+          >
+          <div class="input-error" *ngIf="getError('upload_proof')">
+            <span>This field is required</span>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Declaration -->
+      <div class="col-md-12 mt-3">
+        <h2>Declaration</h2>
+        <div class="form-check d-flex align-items-center">
+          <input
+            type="checkbox"
+            id="flexCheckDefault"
+            formControlName="declaration"
+            [(ngModel)]="declaration"
+            (change)="onCheckboxChange()"
+            class="form-check-input ng-untouched ng-pristine ng-valid me-4"
+          /><label for="flexCheckDefault"
+            >I hereby declare that all the information provided above is true
+            and accurate to the best of my knowledge. I understand that any
+            false information may lead to disqualification or legal
+            action.</label
+          >
+        </div>
+        <div class="input-error" *ngIf="getError('declaration')">
+          <span>This field is required</span>
+        </div>
+      </div>
+      <!--  -->
+
+      <!--  -->
+      <div class="col-md-12 text-center">
+        <!-- <button type="submit" class="submit-btn mb-3">Submit</button> -->
+        <button
+          (click)="onSubmit()"
+          [class.disable-btn]="loading"
+          class="submit-btn mb-3"
+        >
+          Submit
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            *ngIf="loading"
+          ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+<app-footer></app-footer>

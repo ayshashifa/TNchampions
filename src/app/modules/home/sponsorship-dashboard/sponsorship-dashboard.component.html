@@ -1,0 +1,160 @@
+<app-header
+  class="bg-primary"
+  singleImege="/assets/gallery-img/img5.jpg"
+></app-header>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12" style="padding: unset;">
+        <img src="/assets/gallery-img/img5.jpg" alt="" width="100%" height="360px">
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container py-4">
+        <div class="row ">
+            <div class="col-md-12 text-center">
+                <img src="{{userData1?.photo}}" alt="" class="logo" width="80px" height="80px"><br>
+                    <h2>{{userData1?.name}}</h2>
+            </div>
+            <!-- <div class="container mt-4"> -->
+                <div class="row header">
+                    <div class="col-md-6">
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>User Id:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.user_id}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>TNCF Id:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.tncf_id}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Email Id:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.emailid}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Contact NO:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.mobile_no}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Aadhaar No:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.aadhaar_no}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Holder Name:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.name_acc_holder}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Bank Name:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.bank_name}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Branch:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.branch_name}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>IFSC Code:</strong>
+                            </div>
+                            <div class="col-8">
+                                {{userData1?.ifsc_code}}
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3 text-start">
+                                <strong>Upload Proof:</strong>
+                            </div>
+                            <div class="col-8">
+                                <a href="{{userData1?.upload_proof}}" target="_blank" class="text-white">View Proof</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Application ID</th>
+                        <th>Name of Event</th>
+                        <th>Level</th>
+                        <th>Discipline</th>
+                        <th>Proof Achieve</th>
+                        <th>Required Details</th>
+                        <th>Purpose</th>
+                        <th>Type Requirement</th>
+                        <!-- <th>Accept/Reject Reason</th>
+                        <th>Status</th>
+                        <th>Action</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let achievement of achievement">
+                        <td>{{ achievement?.application_id }}</td>
+                        <td>{{ achievement?.name_event }}</td>
+                        <td>{{ achievement?.level }}</td>
+                        <td>{{ achievement?.discipline }}</td>
+                        <!-- <td><a href="{{achievement?.proof_achieve}}" target="_blank">View</a>
+                        </td>  -->
+                        <td>
+                            <div *ngFor="let proof of achievement?.proof_achieve; let i = index">
+                              <a [href]="proof" target="_blank">Proof{{ i + 1 }}</a>
+                            </div>
+                          </td>
+                        <td>{{achievement?.require_details}}</td>
+                        <td>{{achievement?.purpose}}</td>
+                        <td>{{achievement?.type_requirement}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
+  <!-- <td ><span *ngIf="achievement?.accept_reason">{{achievement?.accept_reason}}</span>
+                             <span *ngIf="achievement?.reject_reason">{{achievement?.reject_reason}}</span></td>
+                        <td [ngClass]="{
+                          'text-success': achievement?.status === 1,  
+                          'text-danger': achievement?.status === 2,   
+                          'text-warning': achievement?.status === null
+                        }"><span *ngIf="achievement?.status ===1">Accept</span>
+                        <span *ngIf="achievement?.status ===2">Reject</span>
+                        <span *ngIf="achievement?.status === null">In Progress</span>
+                    </td>
+                        <td class="text-center"><i class="fa fa-edit"></i>
+                        </td> -->

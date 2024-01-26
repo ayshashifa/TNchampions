@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5736481176444461852" datatype="html">
+        <source>About Us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8564570498644854441" datatype="html">
+        <source> An initiative to partner with citizens and corporate to revamp sports in Tamil Nadu. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">62,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5369123002960718942" datatype="html">
+        <source>Vision</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4024740509429967794" datatype="html">
+        <source> To re-imagine, rejuvenate and reinvigorate the sporting culture, ecosystem, and infrastructure in Tamil Nadu. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">18,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="333846312452076555" datatype="html">
+        <source>Mission</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5860253838606822364" datatype="html">
+        <source> 1. To put in place state-of-the-art sports infrastructure and sporting amenities </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">27,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5830291991530075209" datatype="html">
+        <source> 2. To identify, nurture and support sports persons across the spectrum </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3498398355553065656" datatype="html">
+        <source>3. To provide world-class training/coaching to the sports persons</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6824659394209465144" datatype="html">
+        <source> 4. To promote diverse disciplines of sports including traditional sports </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">35,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8313632024633697888" datatype="html">
+        <source> 5. To promote research and development in the field of sports science </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4836913309646747016" datatype="html">
+        <source> 6. To promote sports in its various forms - lifestyle, recreational, etc. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">42,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2770056691424237285" datatype="html">
+        <source> 7. To make sports an accessible, equitable and universal phenomenon </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8334987655217338893" datatype="html">
+        <source>OUR <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fs-1 fw-bold&quot;&gt;"/>TEAM<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="846007671029200971" datatype="html">
+        <source> Board of Directors </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="143952614234514231" datatype="html">
+        <source> Chief Mentor/s </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="180557228995117827" datatype="html">
+        <source> Executive Committee </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6683685175314473767" datatype="html">
+        <source> District-level committee </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">88,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7232070520978488917" datatype="html">
+        <source> CSR Secretariat </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">91,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9113443358640861389" datatype="html">
+        <source>Chairperson</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1853725661246064345" datatype="html">
+        <source> Minister for Youth Welfare and Sports Development </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">113,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2390689205905389897" datatype="html">
+        <source>Vice-Chairperson</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2968874364795134694" datatype="html">
+        <source> ACS, Youth Welfare and Sports Development </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">128,130</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">218,220</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1159811861850708188" datatype="html">
+        <source>Executive Chairperson(s)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7449384485908896162" datatype="html">
+        <source>Representatives from corporate field</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8708302431320359386" datatype="html">
+        <source>Member Convenor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3868559784196539625" datatype="html">
+        <source>Member Secretary, SDAT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">228</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6297950127540572260" datatype="html">
+        <source>Member</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">235</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">245</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">265</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2016972215739206989" datatype="html">
+        <source>ACS/Finance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3062433669403842464" datatype="html">
+        <source>ACS/Industries</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1469333183763839374" datatype="html">
+        <source>Principal Secretary/IT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7116285215181232020" datatype="html">
+        <source>Chief Mentor/s</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6227772105845663587" datatype="html">
+        <source> Eminent sports persons from various sporting disciplines </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">204,206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="615347962358045751" datatype="html">
+        <source> A representative from Finance Department </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">236,238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1157926453812850930" datatype="html">
+        <source> A representative from Industries Department </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">246,248</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2562017321673362194" datatype="html">
+        <source>A representative from IT Department</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="649495293907050795" datatype="html">
+        <source>Operational Head of CSR Secretariat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">266</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5390392471358624785" datatype="html">
+        <source>District-level committee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">273</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1998202289950306724" datatype="html">
+        <source>1. Chairperson - District Collector.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">274</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7017701521074462523" datatype="html">
+        <source>2. Member Convener - District Sports Officer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3088404460491653951" datatype="html">
+        <source>3. Member - District Revenue Officer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">276</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1753970152353754838" datatype="html">
+        <source>4. Member - Project Officer - DRDA</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">277</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4143656243378456677" datatype="html">
+        <source> 5. Three members nominated by the District Collector - one member from the field of sports, one member representing industries and one member from an NGO </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">278,282</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6700189258964814049" datatype="html">
+        <source>CSR Secretariat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8489427864663259265" datatype="html">
+        <source>1. An operational Head of the CSR Secretariat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">286</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6115908675452858551" datatype="html">
+        <source>2. A coordinator for Finance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">287</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3206170881735712099" datatype="html">
+        <source>3. A coordinator for Corporate Management</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9076466586271782694" datatype="html">
+        <source>4. A coordinator for IT and Communications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3753787748962726034" datatype="html">
+        <source> UTILIZATION<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fs-1 fw-bold&quot;&gt;"/>NORMS<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">297,298</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2927546841371119222" datatype="html">
+        <source> The donations received through the Champions Foundation will be used according to the following norms </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">301,303</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4013060476269413412" datatype="html">
+        <source>Training</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8089453695868890903" datatype="html">
+        <source>Travel Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">326</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4531960510824900278" datatype="html">
+        <source>Nutrition</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">337</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8463875115420769853" datatype="html">
+        <source>Hostels</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/about-us/about-us.component.html</context>
+          <context context-type="linenumber">348</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5690745838262220140" datatype="html">
+        <source> HOW CAN YOU <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fs-4 fw-bold&quot;&gt;"/>GET INVOLVED?<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5340914749012432942" datatype="html">
+        <source> Click the donate button and join the club of premier sport donors of TN.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8994234618907588022" datatype="html">
+        <source>One click here boosts several kicks on the ground.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7596451752476648282" datatype="html">
+        <source> Donate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8577268409489796660" datatype="html">
+        <source> SPORTS <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fs-4 fw-bold&quot;&gt;"/>EVENT VIDEOS<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">186,187</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1839108696271227786" datatype="html">
+        <source> Witness our champions display their skills and elegance across sporting arenas </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">189,192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="241153649809805408" datatype="html">
+        <source> UPCOMING <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fs-3 fw-bold&quot;&gt;"/>EVENTS<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">257,258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4292134074681523437" datatype="html">
+        <source> Grand and simple. Huge and small. The details of all scheduled events across the length and breadth of our State. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">260,263</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="350740959652560953" datatype="html">
+        <source>World Surfing League</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">279</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="425609286381818989" datatype="html">
+        <source> World Surfing League will be hosted in Chennai. The Government will support the conduct of the World surfing league and an amount of Rs.268 lakh will be allotted for this purpose. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">281,285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2522359695414171795" datatype="html">
+        <source> Read More <x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg
+                  xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                  width=&quot;12&quot;
+                  height=&quot;10&quot;
+                  viewBox=&quot;0 0 12 10&quot;
+                  fill=&quot;none&quot;
+                &gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path
+                    d=&quot;M11.9997 4.9999C11.9956 4.56148 11.819 4.14231 11.508 3.83323L7.93301 0.249896C7.77687 0.0946867 7.56566 0.00756836 7.34551 0.00756836C7.12535 0.00756836 6.91414 0.0946867 6.75801 0.249896C6.6799 0.327365 6.61791 0.419532 6.5756 0.521082C6.53329 0.622631 6.51151 0.731553 6.51151 0.841563C6.51151 0.951572 6.53329 1.06049 6.5756 1.16204C6.61791 1.26359 6.6799 1.35576 6.75801 1.43323L9.49967 4.16656H1.16634C0.945327 4.16656 0.733366 4.25436 0.577086 4.41064C0.420805 4.56692 0.333008 4.77888 0.333008 4.9999C0.333008 5.22091 0.420805 5.43287 0.577086 5.58915C0.733366 5.74543 0.945327 5.83323 1.16634 5.83323H9.49967L6.75801 8.5749C6.60109 8.73071 6.51249 8.94248 6.51171 9.16362C6.51093 9.38475 6.59803 9.59714 6.75384 9.75406C6.90966 9.91098 7.12143 9.99958 7.34256 10.0004C7.5637 10.0011 7.77609 9.91404 7.93301 9.75823L11.508 6.1749C11.821 5.86377 11.9978 5.44121 11.9997 4.9999Z&quot;
+                    fill=&quot;#C19932&quot;
+                  /&gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path
+                    d=&quot;M11.9997 4.9999C11.9956 4.56148 11.819 4.14231 11.508 3.83323L7.93301 0.249896C7.77687 0.0946867 7.56566 0.00756836 7.34551 0.00756836C7.12535 0.00756836 6.91414 0.0946867 6.75801 0.249896C6.6799 0.327365 6.61791 0.419532 6.5756 0.521082C6.53329 0.622631 6.51151 0.731553 6.51151 0.841563C6.51151 0.951572 6.53329 1.06049 6.5756 1.16204C6.61791 1.26359 6.6799 1.35576 6.75801 1.43323L9.49967 4.16656H1.16634C0.945327 4.16656 0.733366 4.25436 0.577086 4.41064C0.420805 4.56692 0.333008 4.77888 0.333008 4.9999C0.333008 5.22091 0.420805 5.43287 0.577086 5.58915C0.733366 5.74543 0.945327 5.83323 1.16634 5.83323H9.49967L6.75801 8.5749C6.60109 8.73071 6.51249 8.94248 6.51171 9.16362C6.51093 9.38475 6.59803 9.59714 6.75384 9.75406C6.90966 9.91098 7.12143 9.99958 7.34256 10.0004C7.5637 10.0011 7.77609 9.91404 7.93301 9.75823L11.508 6.1749C11.821 5.86377 11.9978 5.44121 11.9997 4.9999Z&quot;
+                    fill=&quot;#C19932&quot;
+                  /&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">288,301</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">325,338</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">360,373</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2053762533499199708" datatype="html">
+        <source>Hockey Asian Men&apos;s Championship</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6075734338479104374" datatype="html">
+        <source> Hockey Asian Men’s Championship 2023 at Chennai The Government will support the hosting of Hockey Asian Men’s Championship 2023 at Chennai. This mega event will mark the return of an International level Hockey competition to Chennai after 15 years </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">318,323</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3572734421002038699" datatype="html">
+        <source>CM Trophy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">353</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7429217706193401458" datatype="html">
+        <source> Level Chief Minister Trophy Games. State Level CM Trophy Games will be conducted in Chennai. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/home/home/home.component.html</context>
+          <context context-type="linenumber">355,358</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1140327701924892323" datatype="html">
+        <source>Quick Links</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9124989560824434340" datatype="html">
+        <source>Initiatives</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2181154762165715522" datatype="html">
+        <source>Gallery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8439955599488894226" datatype="html">
+        <source>Privacy Policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3303852097031321192" datatype="html">
+        <source>Terms &amp; Conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2236877205125634440" datatype="html">
+        <source>Get in touch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8827952434401517689" datatype="html">
+        <source> Jawaharlal Nehru Stadium, Raja Muthiah Road, Periyamet, Chennai- 600003, Tamil Nadu, India. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">47,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome" datatype="html">
+        <source> Copyright © 2023 TN Champions Foundation All rights reserved. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">82,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5173115640670709698" datatype="html">
+        <source>Login </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4391984680010360845" datatype="html">
+        <source>SignUp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6570363013146073520" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="759687838251957893" datatype="html">
+        <source>Contact Us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4870385413479149812" datatype="html">
+        <source> Get Involved </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">118,120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6524481568474909049" datatype="html">
+        <source> Tamil Nadu Champions Foundation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">235,236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2815514024677011668" datatype="html">
+        <source> Nurturing Champions, together!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">238,239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="515418225123731359" datatype="html">
+        <source> An initiative of SDAT to collaborate with citizens and corporates. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Partner to bolster the spirit of sporting culture in Tamil Nadu! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">244,249</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="776735400228657644" datatype="html">
+        <source> I Want to Get Involved </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/header/header.component.html</context>
+          <context context-type="linenumber">257,259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1438312417601101654" datatype="html">
+        <source> OUR <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;fs-4 fw-bold&quot;&gt;"/>INITIATIVES<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5770624112663624501" datatype="html">
+        <source> Highlights of our multi pronged approach to create winning culture. Click the icons to know more. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">13,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3145398957175565003" datatype="html">
+        <source>TN Chief Minister&apos;s Trophy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9101872171641963468" datatype="html">
+        <source>Special scholarship for Elite sports persons</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6790984643747464625" datatype="html">
+        <source>Mission International Medals Scheme - MIMS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2666130211440916490" datatype="html">
+        <source>Champions Development Scheme - CDS </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2109606803813430495" datatype="html">
+        <source>World Beaters Talent Spotting Scheme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8000327307488008226" datatype="html">
+        <source>Centers of Excellence</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5823823267847026393" datatype="html">
+        <source>Specialized Sports Academies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4380258972097002448" datatype="html">
+        <source>Sports Hostels</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4295002405915181371" datatype="html">
+        <source>Sports Hostels of Excellence</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/layout/our-initiatives/our-initiatives.component.html</context>
+          <context context-type="linenumber">82,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5866254605255506989" datatype="html">
+        <source>English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/translate-update/translate-update/translate-update.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1470838756664816116" datatype="html">
+        <source>Tamil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/translate-update/translate-update/translate-update.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

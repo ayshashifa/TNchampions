@@ -1,0 +1,59 @@
+@import "../../../../assets/temp-style.scss";
+
+.title {
+  // right: 490px;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #7e4b1e;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+.title1 {
+  // right: 490px;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #c19932;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+.carousel-item {
+  img {
+    height: 550px;
+  }
+}
+
+.donation-row-card {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  border: 1px solid brown;
+  cursor: pointer;
+  align-items: center !important;
+}
+
+.icon-card-donation {
+  background-color: #c19932;
+  height: 147px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.content-card-donation {
+  height: 147px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7e4b1e;
+  color: white;
+}
+h2{
+  color: #7e4b1e;
+}

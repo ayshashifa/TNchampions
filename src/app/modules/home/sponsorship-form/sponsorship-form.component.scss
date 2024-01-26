@@ -1,0 +1,139 @@
+.container-fluid,.app-header {
+    background-color: #f6f0e0;
+  }
+  h2 {
+    color: #7f4b1e;
+    font-size: 20px;
+  }
+  p{
+    color: white;
+    font-size: 18px;
+  }
+  .bg{
+    background-color: #7f4b1e;
+    padding: 8px;
+  }
+  .round {
+    color: #000000;
+    padding: 10px 50px;
+    border-radius: 55px;
+    border: none;
+    background: #ffc746;
+  }
+  
+  h3{
+    color: #7f4b1e;
+  }
+  .form-group {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    height: 50px;
+    // line-height: 2.5;  
+  }
+  
+  .err {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: -15px;
+  }
+  
+  .e-star {
+    color: red;
+  }
+  
+  .disabled-select {
+    background: #ccc;
+    pointer-events: none;
+  }
+  
+  .input-error {
+    color: red;
+    color: red;
+    position: absolute;
+    font-size: 12px;
+  }
+  .submit-btn {
+    color: #000000;
+    padding: 10px 50px;
+    border-radius: 55px;
+    border: none;
+    background: #ffc746;
+  }
+  .select-container {
+  position: relative;
+  }
+  .select-container select {
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  padding-right: 30px; 
+  width: 100%; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  }
+  .select-container i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; 
+  cursor: pointer;
+  }
+  label {
+  display: inline-block;
+  padding-bottom: 8px;
+  }
+  .image-container {
+  position: relative;
+  display: inline-block; 
+  }
+  
+  .selected-image {
+  width: 150px;
+  height: 150px;
+  margin: 8px;
+  }
+  
+  .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1; /* Ensure the button appears above the image */
+  }
+  .avatar-image{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  
+  }
+  .modal-submit {
+    color: #000000;
+    padding: 10px 50px;
+    border-radius: 55px;
+    border: none;
+    background: #ffc746;
+  }
+
+  .file-input {
+    display: none;
+  }
+  .filebtn{
+    background-color: #7f4b1e;
+    color: white;
+  }
+  textarea{
+    height: 100px;
+    width: 100%;
+  }
+
+  .img-banner{
+    height: 100vh;
+  }

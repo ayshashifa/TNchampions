@@ -1,0 +1,93 @@
+.crd {
+  background: #f2da9b;
+  width: 205px;
+  height: 300px;
+  padding: 42px 10px 42px 10px;
+  cursor: pointer;
+  img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  span {
+    display: block;
+    padding-bottom: 20px;
+  }
+}
+.crd:hover {
+  transform: scale(1.05);
+}
+.box-donate {
+  // padding: 16px;
+    border: 1px solid #7e4b1e;
+    align-items: center;
+}
+.content {
+  padding-left: 3pc;
+}
+.icon {
+  margin: unset;
+  justify-content: center;
+  background-color: #c19932;
+  padding: unset;
+  height: 155px;
+  align-items: center;
+  display: flex;
+}
+
+.donate-heading {
+  height: 155px;
+    background-color: #7e4b1e;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-size: 24px;
+    justify-content: center;
+}
+
+h4,h2 {
+  color: #7e4b1e;
+}
+.pe {
+  padding-right: 17px;
+}
+.donate-btn {
+  color: #fff;
+  background-color: #7e4b1e;
+}
+  .active {
+    cursor: pointer;
+    background: #7e4b1e;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+  
+  }
+  .active::after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 20;
+    border: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    margin-top: -20px;
+    top: 50%;
+    border-left: 20px solid #7e4b1e;
+    left: auto;
+    right: -20px;
+  }
+
+
+@media screen and (max-width: 425px) {
+  .active::after {
+    display: none;
+  }
+  .content {
+    padding: 3pc;
+  }
+  .crd {
+    width: 100%;
+  }
+}

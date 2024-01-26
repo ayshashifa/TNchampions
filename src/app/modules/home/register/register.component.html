@@ -1,0 +1,436 @@
+<!-- <app-header></app-header> -->
+<app-header singleImege="/assets/logo/banner-img/aboutus.jpg"></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding: unset;">
+      <img src="/assets/logo/banner-img/aboutus.jpg" alt="" width="100%" height="360px">
+    </div>
+  </div>
+</div>
+<!-- <form *ngIf="rolechoose">
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 ">
+            <h4 class="text-left mb-3">Choose your role</h4>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="p-5 mb-4 userbox" (click)="user()">
+                        <label >
+                          <img src="../../../../assets/image/business-man.svg" alt="" width="24px"> <br>
+                            Donor
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6  text-center">
+                    <div class="p-5 mb-4 userbox" (click)="recipient()" >
+                        <label>
+                          <img src="../../../../assets/image/business-man.svg" alt=""  width="24px"> <br>
+                          Recipient
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>  -->
+
+
+
+
+
+
+
+<form class="bg" [formGroup]="form" >
+  <div class="container">
+
+    <h2 class="text-center pt-3" style="color: #7f4b1e;">SignUp Form</h2>
+
+    <!-- <div class="form-group p-5">
+      <label>Select Your Type</label>
+      <select class="form-control" (change)="formTypeChanges(val.value)" #val>
+        <option value="individual">Individual</option>
+        <option value="corporate">Corporate</option>
+        <option value="business">Business</option>
+        <option value="npo">NPO</option>
+      </select>
+    </div> -->
+
+    <div class="row center-block">
+      <div class="col-md-3"></div>
+      <div class="col-md-12 d-flex justify-content-center center-block">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" [ngClass]="{'active-tab': formType === 'individual'}">
+            <a class="nav-link active" (click)="formTypeChanges('individual')">Individual</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active-tab': formType === 'corporate'}">
+            <a class="nav-link active" (click)="formTypeChanges('corporate')">Corporate</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active-tab': formType === 'business'}">
+            <a class="nav-link active" (click)="formTypeChanges('business')">Business</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active-tab': formType === 'npo'}">
+            <a class="nav-link active" (click)="formTypeChanges('npo')">NPO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!--///////////////////Individual Start ///////////////////////////////////////-->
+    <div class="row" *ngIf="formType == 'individual'">
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Name <span class="e-star">*</span></label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Name">
+          <div class="input-error" *ngIf="getError('name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email <span class="e-star">*</span></label>
+          <input type="text" formControlName="email" class="form-control" placeholder="Email">
+          <div class="input-error" *ngIf="getError('email')">
+            <span>Enter valid email Id</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone <span class="e-star">*</span></label>
+          <input type="text" (keypress)="numberOnly($event)" maxlength="10" formControlName="phone_no"
+            class="form-control" placeholder="Phone">
+          <div class="input-error" *ngIf="getError('phone_no')">
+            <span>Enter Valid 10 digit number</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Country <span class="e-star">*</span> </label>
+          <select formControlName="country" class="form-control">
+            <option [value]="'india'">India</option>
+          </select>
+          <div class="input-error" *ngIf="getError('country')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>State <span class="e-star">*</span></label>
+          <select formControlName="state" class="form-control">
+            <option value="" [disabled]="true">Select State</option>
+            <option *ngFor="let data of stateList" [value]="data.name">{{data.name}}</option>
+          </select>
+          <div class="input-error" *ngIf="getError('state')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>PIN Code <span class="e-star">*</span></label>
+          <input type="text" (keypress)="numberOnly($event)" maxlength="6" formControlName="pincode"
+            class="form-control" placeholder="Pincode">
+          <div class="input-error" *ngIf="getError('pincode')">
+            <span>Enter a vaid 6 digit valid pincode</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>PAN Number <span class="e-star">*</span> </label>
+        <input type="text" formControlName="pan_no" maxlength="10" class="form-control" placeholder="PAN">
+        <div class="input-error" *ngIf="getError('pan_no')">
+          <span>Enter 10 digit valid Pan number</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!--///////////////////Individual End ///////////////////////////////////////-->
+
+
+    <!--///////////////////corporate Or Business Start ///////////////////////////////////////-->
+    <div class="row" *ngIf="formType == 'corporate' || formType == 'business'">
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label *ngIf="formType == 'corporate'">Name Of Company <span class="e-star">*</span></label>
+          <label *ngIf="formType == 'business'">Name of Business <span class="e-star">*</span></label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Name">
+          <div class="input-error" *ngIf="getError('name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Country <span class="e-star">*</span> </label>
+          <select formControlName="country" class="form-control">
+            <option [value]="'india'">India</option>
+          </select>
+          <div class="input-error" *ngIf="getError('country')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Company Address <span class="e-star">*</span> </label>
+          <textarea class="form-control" formControlName="address" placeholder="address"></textarea>
+          <div class="input-error" *ngIf="getError('address')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>State <span class="e-star">*</span></label>
+          <select formControlName="state" class="form-control">
+            <option value="" [disabled]="true">Select State</option>
+            <option *ngFor="let data of stateList" [value]="data.name">{{data.name}}</option>
+          </select>
+          <div class="input-error" *ngIf="getError('state')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Land Line</label>
+          <input type="text" formControlName="landline" class="form-control" placeholder="Landline">
+          <div class="input-error" *ngIf="getError('landline')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group" *ngIf="formType == 'corporate'">
+          <label>CIN Number <span class="e-star">*</span></label>
+          <input type="text" formControlName="cin_no" class="form-control" placeholder="CIN Number">
+          <div class="input-error" *ngIf="getError('cin_no')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group" *ngIf="formType == 'business'">
+          <label>TIN / GST Number <span class="e-star">*</span></label>
+          <input type="text" formControlName="tin_no" class="form-control" placeholder="TIN / GST Number">
+          <div class="input-error" *ngIf="getError('tin_no')">
+            <span>This field is required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Name <span class="e-star">*</span></label>
+          <input type="text" formControlName="per_name" class="form-control" placeholder="Name">
+          <div class="input-error" *ngIf="getError('per_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Employee ID <span class="e-star">*</span></label>
+          <input type="text" formControlName="per_empid" class="form-control" placeholder="Employee ID">
+          <div class="input-error" *ngIf="getError('per_empid')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Official Mail Id <span class="e-star">*</span></label>
+          <input type="text" formControlName="email" class="form-control" placeholder="Email">
+          <div class="input-error" *ngIf="getError('email')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Employee Designation</label>
+                    <input type="text" formControlName="desig" class="form-control" placeholder="Designation">
+          <div class="input-error" *ngIf="getError('desig')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>PIN Code <span class="e-star">*</span></label>
+          <input type="text" (keypress)="numberOnly($event)" maxlength="6" formControlName="pincode"
+            class="form-control" placeholder="Pincode">
+          <div class="input-error" *ngIf="getError('pincode')">
+            <span>Enter a vaid 6 digit valid pincode</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone <span class="e-star">*</span></label>
+          <input type="text" formControlName="phone_no" class="form-control" placeholder="Phone"
+            (keypress)="numberOnly($event)" maxlength="10">
+          <div class="input-error" *ngIf="getError('phone_no')">
+            <span>Enter Valid 10 digit number</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" *ngIf="formType == 'business'">
+        <label>PAN Number</label>
+        <input type="text" formControlName="pan_no" maxlength="10" class="form-control" placeholder="PAN Number">
+        <div class="input-error" *ngIf="getError('pan_no')">
+          <span>Enter 10 digit valid Pan number</span>
+        </div>
+      </div>
+
+
+      <div class="p-3">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="regOne">
+          <label class="form-check-label" for="regOne">Are You currently engaged with any NGO</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" formControlName="csr_account" type="checkbox" role="switch" id="regTwo">
+          <label class="form-check-label" for="regTwo">Do you have csr account?</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" formControlName="donate_csr_account" type="checkbox" role="switch"
+            id="regTwo">
+          <label class="form-check-label" for="regTwo">Do you wish to donate throught your CSR bank account</label>
+        </div>
+      </div>
+
+    </div>
+    <!--///////////////////corporate Or Business End ///////////////////////////////////////-->
+
+
+    <!--//////////////////////////////////////NPO Start////////////////////////////////////////////-->
+    <div class="row" *ngIf="formType == 'npo'">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Name of the NPO <span class="e-star">*</span></label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Name">
+          <div class="input-error" *ngIf="getError('name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Company Address <span class="e-star">*</span> </label>
+          <textarea class="form-control" formControlName="address" placeholder="Address"></textarea>
+          <div class="input-error" *ngIf="getError('address')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone <span class="e-star">*</span></label>
+          <input type="text" formControlName="phone_no" class="form-control" placeholder="Phone"
+            (keypress)="numberOnly($event)" maxlength="10">
+          <div class="input-error" *ngIf="getError('phone_no')">
+            <span>Enter Valid 10 digit number</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email <span class="e-star">*</span></label>
+          <input type="text" formControlName="email" class="form-control" placeholder="Email">
+          <div class="input-error" *ngIf="getError('email')">
+            <span>Enter valid email Id</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>NPO PAN <span class="e-star">*</span></label>
+          <input type="text" formControlName="pan_no" class="form-control" placeholder="NPO PAN">
+          <div class="input-error" *ngIf="getError('pan_no')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>NPO Registration Number <span class="e-star">*</span> </label>
+          <input type="text" formControlName="npo_reg_no" class="form-control" placeholder="NPO Registration Number">
+          <div class="input-error" *ngIf="getError('npo_reg_no')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Designated Contact Person Name <span class="e-star">*</span></label>
+          <input type="text" formControlName="per_name" class="form-control" placeholder="Name">
+          <div class="input-error" *ngIf="getError('per_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Designated Contact Person Phone <span class="e-star">*</span></label>
+          <input type="text" formControlName="per_contact" maxlength="10" class="form-control" placeholder="Phone"
+            (keypress)="numberOnly($event)" maxlength="10">
+          <div class="input-error" *ngIf="getError('per_contact')">
+            <span>This field is required</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>80G Certificate to be issued in the name of <span class="e-star">*</span></label>
+          <input type="text" formControlName="npo_80g_name" class="form-control" placeholder="Name">
+          <div class="input-error" *ngIf="getError('npo_80g_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <div class="p-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" formControlName="csr_account" type="checkbox" role="switch" id="regTwo">
+            <label class="form-check-label" for="regTwo">Do you have csr account?</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" formControlName="donate_csr_account" type="checkbox" role="switch"
+              id="regTwo">
+            <label class="form-check-label" for="regTwo">Do you wish to donate throught your CSR bank account</label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--//////////////////////////////////////NPO END////////////////////////////////////////-->
+
+
+    <div class="form-group" *ngIf="isDonate">
+      <label>Enter Amount <span class="e-star">*</span></label>
+      <input type="text" (keypress)="numberOnly($event)" maxlength="10" formControlName="amount" class="form-control"
+        placeholder="Enter Amount">
+      <div class="input-error" *ngIf="getError('amount')">
+        <span>This field is required</span>
+      </div>
+    </div>
+
+
+    <div class="text-center pt-5 pb-3">
+      <button (click)="onSubmit()" [class.disable-btn]="loading" class="submit-btn mb-3">Submit
+        <span class="spinner-border spinner-border-sm" role="status" *ngIf="loading"></span>
+      </button>
+      <p>Already have an account? <a class="link-primary" (click)="openLoginModal()">Login here!</a> </p>
+    </div>
+
+
+  </div><!--container-->
+</form>
+
+
+
+<app-footer></app-footer>
+
+
+<!--OTP Modal -->
+<div class="modal fade" id="regOtpModal" tabindex="-1" aria-labelledby="regOtpModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: #7f4b1e;">OTP</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="form-group">
+          <label>Enter OTP</label>
+          <input type="text" class="form-control" placeholder="OTP" #regOtpBox>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button [class.disable-btn]="loading" type="button" class="modal-submit"
+          (click)="sendOtp(regOtpBox.value)">Submit
+          <span class="spinner-border spinner-border-sm" role="status" *ngIf="loading"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="display: none;">
+  <button type="button" data-bs-toggle="modal" data-bs-target="#regOtpModal" data-bs-target="#regOtpModal"
+    #openRegOtpModal></button>
+  <button type="button" data-bs-dismiss="modal" data-bs-target="#regOtpModal" data-bs-target="#regOtpModal"
+    #closeRegOtpModal></button>
+</div>

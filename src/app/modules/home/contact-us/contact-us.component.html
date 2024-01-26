@@ -1,0 +1,126 @@
+<!-- <app-header></app-header> -->
+<!-- <app-header singleImege="/assets/logo/banner-img/get-involved-1.jpg"></app-header> -->
+<app-header singleImege="/assets/new/hok.jpg"></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding: unset;">
+      <img src="/assets/new/hok.jpg" alt="" class="img-banner">
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="row">
+    <p class="text-primary text-uppercase" i18n>Contact US</p>
+    <div class="col-md-6">
+      <h1 i18n>Tamil Nadu Champions Foundation</h1>
+      <h4 class="fw-bold" i18n>Help Desk</h4>
+      <p i18n>
+        Jawaharlal Nehru Stadium, Raja Muthiah Road, Periyamet, <br />
+        Chennai- 600003, Tamil Nadu, India. <br />
+        <span class="fw-bold">Phone: +91 9514 000 777 </span><br>
+        <span class="fw-bold">E-mail: tnchampionsfoundation@gmail.com</span>
+
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h4 class="fw-bold" i18n>Reach Out Officers</h4>
+      <p class="mb-5">
+        <span class="fw-bold" i18n>Thiru J. Meghanatha Reddy IAS.,</span><br />
+       <span i18n="@@CHIEF">CHIEF EXECUTIVE OFFICER/ MEMBER SECRETARY </span> <br />
+        <span class="fw-bold" i18n>Phone: 7823625700</span> <br>
+        <span class="fw-bold" i18n>E-mail: tnchampionsfoundation@gmail.com</span>
+       
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" style="background: #f6f0e0">
+  <div class="container">
+    <div class="row my-5 py-5">
+      <div class="col-md-4">
+        <p class="fs-4 " i18n>
+          GET IN <br /><span class="fs-1 fw-bold">TOUCH</span>
+        </p>
+
+        <p i18n>
+          Your reviews, suggestions and feedback shape us to become better
+          versions. Write to the foundation directly here
+        </p>
+      </div>
+      <div class="col-md-8">
+        <form [formGroup]="form">
+          <div class="row g-0 form-group py-2">
+            <label class="col-sm-4 col-md-2 col-form-label d-flex" for="name" i18n>
+              Name
+            </label>
+            <div class="col-sm-6 col-md-6">
+              <input type="text" class="col form-control" formControlName="name" />
+              <div class="input-error" *ngIf="getError('name')">
+                <span>This field is required</span>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 form-group py-2">
+            <label class="col-sm-4 col-md-2 col-form-label d-flex" for="email" i18n>
+              Email
+            </label>
+            <div class="col-sm-6 col-md-6">
+              <input type="text" class="col form-control" formControlName="email" />
+              <div class="input-error" *ngIf="getError('email')">
+                <span>Enter a valid email id</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-0 form-group py-2">
+            <label class="col-sm-4 col-md-2 col-form-label d-flex" for="mobile" i18n>
+              Phone
+            </label>
+            <div class="col-sm-6 col-md-6">
+              <input type="text" class="col form-control" (keypress)="numberOnly($event)" maxlength="10"
+                formControlName="contact" />
+              <div class="input-error" *ngIf="getError('contact')">
+                <span>Enter a valid 10 digit mobile number</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-0 form-group py-2">
+            <label for="message" class="col-sm-4 col-md-2 col-form-label d-flex" i18n>
+              Message
+            </label>
+            <div class="col-sm-6 col-md-6">
+              <textarea formControlName="message" class="col form-control" rows="5"></textarea>
+              <div class="input-error" *ngIf="getError('message')">
+                <span>This field is required</span>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn submit" [class.disable-btn]="loading" (click)="onSubmit()" i18n>SUBMIT
+            <span class="spinner-border spinner-border-sm" role="status" *ngIf="loading"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="userData?.account">
+  <div class="row my-5 py-5">
+    <div class="col-md-12">
+      <h3 class="fw-bold" i18n>NEFT Transfers</h3>
+      <h5 i18n>
+        The details for making donations via NEFT / RTGS / IMPS Transfers are given below : 
+      </h5>
+      <p><b i18n>Account No:</b> {{userData?.account}}</p>
+      <p><b i18n> Account Name:</b>Tamilnadu Champions Foundation</p>
+      <p><b i18n>IFSC Code:</b> HDFC0005607</p>
+      <p><b i18n> Branch Name: </b>PATTALAM BRANCH, CHENNAI</p>
+      <p><b i18n>Bank Name:</b>HDFC BANK LTD
+      </p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

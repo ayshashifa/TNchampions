@@ -1,0 +1,33 @@
+@import "../../../../assets/temp-style.scss";
+
+.input-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.disable-btn {
+  background: #ccc;
+  pointer-events: none;
+}
+
+/* contact us */
+.form-control {
+  border: unset;
+}
+label {
+  font-weight: 500;
+}
+.submit {
+  width: auto;
+  height: 40px;
+  left: 508px;
+  top: 1341px;
+  background: #2c4257;
+  color: white;
+  font-family: 16px "Mulish";
+  margin-left: 9pc;
+}
+// .img-banner{
+//   height: 100vh;
+// }

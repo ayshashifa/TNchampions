@@ -1,0 +1,85 @@
+h2{
+    color: #7e4b1e;
+}
+.pagination-md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  ::ng-deep .pagination-md ul.pagination li a:hover {
+    background-color: #7e4b1e;
+    color: #fff;
+  }
+  ::ng-deep .pagination-md ul.pagination li a:active {
+    background-color: #7e4b1e;
+    color: #fff;
+  }
+  ::ng-deep .pagination-md ul.pagination li a  {
+    text-decoration: none;
+    color: #7e4b1e;
+    padding: 5px 10px;
+    border: 1px solid #7e4b1e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  ::ng-deep .pagination-md .page-link.active,
+  ::ng-deep .pagination-md .active > .page-link {
+    z-index: 3;
+    color: #fff;
+    --bs-pagination-active-bg: #7e4b1e; /* Change background color to red */
+  }
+  
+  
+.tabs-sel {
+  padding: 1.5rem 1rem;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  // text-transform: capitalize;
+  color: #121212;
+  text-decoration: none;
+  cursor: pointer;
+}
+.active {
+  border-bottom: 2px solid #7e4b1e;
+  color: #121212;
+  text-decoration: none;
+}
+/*  */
+.box-part {
+  background: #f1f3f4;
+  font-family: "mulish";
+  border-radius: 0;
+  padding: 10px;
+  margin: 21px 0px;
+  height: 188px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.Training {
+  background-color: #866460;
+  width: 197px;
+  height: auto;
+  margin: 8px;
+  padding: 42px 10px 42px 10px;
+}
+.Training:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1024px) {
+  .Training {
+    width: 164px;
+  }
+  .tabs-sel {
+    padding: 1.5rem 0.3rem;
+  }
+}
+hr {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.img-banner{
+  height: 550px;
+}

@@ -1,0 +1,405 @@
+<section>
+  <!-- <section [ngClass]="isHomePage ? 'layout-height' : 'layout-height2'"> -->
+  <div class="container-fluid header-1 mt-3">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="extra-logo">
+          <a class="navbar-brand" routerLink="/"
+            ><img src="/assets/logo/tnchampionlogo.svg" class="home-logo"
+          /></a>
+          <img
+            src="../../../../assets/logo/kaligarlogoyear.jpg"
+            class="kalaignar ms-2"
+            alt="kalaignar 100 "
+          />
+          <img src="/assets/logo/cmphoto .png" class="cm" />
+          <img
+            src="../../../../assets/logo/minister.png"
+            class="minister"
+            alt=""
+          />
+          <img src="../../../../assets/logo/sdat-tn.png" class="sdat" alt="" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="ls">
+          <span
+            *ngIf="token && userData?.type === 'sponsorship'"
+            [routerLinkActive]="['active']"
+            routerLink="/Sponsorship-form"
+            i18n
+            >Sponsorship Form</span
+          >
+          <span>
+            <select (change)="changeLang(val.value)" #val [value]="lang">
+              <option value="english">English</option>
+              <option value="tamil">Tamil</option>
+            </select>
+          </span>
+          <ng-container *ngIf="!token">
+            <span i18n data-bs-toggle="modal" data-bs-target="#roleModal"
+              >Login
+            </span>
+            <span i18n [routerLinkActive]="['active']" routerLink="/register"
+              >SignUp</span
+            >
+          </ng-container>
+          <span
+            i18n="@@guideme"
+            [routerLinkActive]="['active']"
+            (click)="downloadPdf()"
+            >Guide Me
+          </span>
+          <ng-container *ngIf="token">
+            <span (click)="logout()"> Logout </span>
+          </ng-container>
+          <ng-container *ngIf="token">
+            <ng-container *ngIf="userData?.type !== 'sponsorship'">
+              <span [routerLinkActive]="['active']" routerLink="/dashboard" i18n
+                >Dashboard</span
+              >
+            </ng-container>
+          </ng-container>
+          <ng-container *ngIf="token">
+            <ng-container *ngIf="userData?.type === 'sponsorship'">
+              <span
+                [routerLinkActive]="['active']"
+                routerLink="/sponsorship-dashboard"
+                >Dashboard</span
+              >
+            </ng-container>
+          </ng-container>
+          <img src="/assets/logo/tn-logo.svg" class="tn-logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light p-0">
+    <div class="container-fluid text-center bar">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarSupportedContent"
+      >
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLinkActive]="['is-active']"
+                routerLink="/home"
+                i18n
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLinkActive]="['is-active']"
+                routerLink="/about-us"
+                i18n
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLinkActive]="['is-active']"
+                routerLink="/initiatives"
+                i18n
+                >Initiatives</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLinkActive]="['is-active']"
+                routerLink="/gallery"
+                i18n
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLinkActive]="['is-active']"
+                routerLink="/contact-us"
+                i18n
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [routerLinkActive]="['is-active']"
+                routerLink="/FinancialDisclosure"
+                i18n="@@financial"
+                >Financial Disclosure
+              </a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link border"
+                [routerLinkActive]="['is-active']"
+                routerLink="/involved"
+                i18n="@@89970906091089947"
+              >
+                Donate
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link border"
+                [routerLinkActive]="['is-active']"
+                routerLink="/registration-form"
+                i18n="@@apply"
+              >
+                Apply for Support
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+<!-- end -->
+
+<!-- Login Modal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: #7f4b1e">
+          Login
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email Id"
+            #loginEmail
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- Donor Login Button -->
+        <button
+          *ngIf="donor"
+          [class.disable-btn]="loading"
+          type="button"
+          class="modal-submit"
+          (click)="openOtp(loginEmail.value, 'Donor')"
+        >
+          Send OTP
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            *ngIf="loading"
+          ></span>
+        </button>
+
+        <!-- Sponsorship Login Button -->
+        <button
+          *ngIf="Sponsorship"
+          [class.disable-btn]="loading"
+          type="button"
+          class="modal-submit"
+          (click)="openOtp(loginEmail.value, 'sponsorship')"
+        >
+          Send OTP
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            *ngIf="loading"
+          ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--OTP Modal -->
+<div
+  class="modal fade"
+  id="otpModal"
+  tabindex="-1"
+  aria-labelledby="otpModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: #7f4b1e">
+          OTP
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="form-group">
+          <label>Enter OTP</label>
+          <input type="text" class="form-control" placeholder="OTP" #otpBox />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          *ngIf="donor"
+          [class.disable-btn]="loading"
+          type="button"
+          class="modal-submit"
+          (click)="loginWIthOTP(otpBox.value, loginEmail.value, 'donor')"
+        >
+          Login
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            *ngIf="loading"
+          ></span>
+        </button>
+        <button
+          *ngIf="Sponsorship"
+          [class.disable-btn]="loading"
+          type="button"
+          class="modal-submit"
+          (click)="loginWIthOTP(otpBox.value, loginEmail.value, 'sponsorship')"
+        >
+          Login
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            *ngIf="loading"
+          ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- rolemodel -->
+
+<div
+  class="modal fade"
+  id="roleModal"
+  tabindex="-1"
+  aria-labelledby="roleModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: #7f4b1e">
+          Choose Your Role
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="p-5 mb-4 userbox" (click)="opendonorlogin()">
+              <label>
+                <img
+                  src="../../../../assets/image/business-man.svg"
+                  alt=""
+                  width="24px"
+                />
+                <br />
+                Donor
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-5 mb-4 userbox" (click)="openrecipientlogin()">
+              <label>
+                <img
+                  src="../../../../assets/image/business-man.svg"
+                  alt=""
+                  width="24px"
+                />
+                <br />
+                Recipient
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display: none">
+  <button
+    type="button"
+    data-bs-dismiss="modal"
+    data-bs-target="#loginModal"
+    #closeLoginModal
+  ></button>
+  <button
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#loginModal"
+    data-bs-target="#loginModal"
+    #openLoginPopup
+  ></button>
+  <button
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#otpModal"
+    data-bs-target="#otpModal"
+    #openOtpModal
+  ></button>
+  <button
+    type="button"
+    data-bs-dismiss="modal"
+    data-bs-target="#otpModal"
+    data-bs-target="#otpModal"
+    #closeOtpModal
+  ></button>
+  <button
+    type="button"
+    data-bs-dismiss="modal"
+    data-bs-target="#roleModal"
+    #closeroleModal
+  ></button>
+  <button
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#roleModal"
+    data-bs-target="#roleModal"
+    #openroleModal
+  ></button>
+</div>

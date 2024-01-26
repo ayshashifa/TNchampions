@@ -1,0 +1,33 @@
+<!-- <app-header></app-header> -->
+
+<app-header singleImege="/assets/logo/banner-img/get-involved.jpg"></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding: unset;">
+      <img src="/assets/logo/banner-img/get-involved.jpg" width="100%" alt="" height="360px">
+    </div>
+  </div>
+</div>
+<div class="cotainer p-5">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name : {{userData?.name}}</li>
+          <li class="list-group-item">Email : {{userData?.email}}</li>
+          <li class="list-group-item">Mobile : {{userData?.phone}} </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button class="round mt-5 mb-3" (click)="logout()">Logout</button>
+  </div>
+
+
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,25 @@
+.container-fluid{
+    background-color: beige;
+}
+.headers{
+    background-color: #7f4b1e;
+    color: white;
+   
+}
+.header{
+    background-color: #7f4b1e;
+    color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 0 10px -2px #00000013;}
+.body{
+    background-color: beige;
+    box-shadow: 0 0 10px 5px #00000013;
+}
+.logo{
+    border-radius: 50%;
+}
+th,strong{
+    font-weight: 500;
+}

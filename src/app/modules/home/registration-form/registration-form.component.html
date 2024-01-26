@@ -1,0 +1,338 @@
+<app-header
+  class="bg-primary"
+  singleImege="/assets/gallery-img/img5.jpg"
+></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding: unset;">
+      <img src="/assets/gallery-img/img5.jpg" alt="" width="100%" height="360px">
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h3 class="text-center pt-3">TNCF Sponsorship Form</h3>
+  <form class="bg" [formGroup]="form">
+    <div class="row mx-5">
+      <div class="col-md-12 pt-3">
+        <h2>Personal Details</h2>
+      </div>
+      <div class="col-md-6">
+        <!-- Personal Details -->
+        <div class="form-group">
+          <label>Name of the Applicant <span class="e-star">*</span></label>
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            placeholder="Name"
+          />
+          <div class="input-error" *ngIf="getError1('name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+          <label>Age <span class="e-star">*</span></label>
+          <input
+            type="text"
+            (keypress)="numberOnly($event)"
+            maxlength="3"
+            formControlName="age"
+            class="form-control"
+            placeholder="Age"
+          />
+          <div class="input-error" *ngIf="getError1('age')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Father's Name -->
+        <div class="form-group">
+          <label>Father's Name <span class="e-star">*</span></label>
+          <input
+            type="text"
+            formControlName="father_name"
+            class="form-control"
+            placeholder="Father's Name"
+          />
+          <div class="input-error" *ngIf="getError1('father_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Aadhaar Number -->
+        <div class="form-group">
+          <label>Aadhaar Number <span class="e-star">*</span></label>
+          <input
+            type="text"
+            (keypress)="numberOnly($event)"
+            maxlength="12"
+            formControlName="aadhaar_no"
+            class="form-control"
+            placeholder="Aadhaar Number"
+          />
+          <div class="input-error" *ngIf="getError1('aadhaar_no')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Primary Mobile Number -->
+        <div class="form-group">
+          <label> Mobile Number <span class="e-star">*</span></label>
+          <input
+            type="text"
+            (keypress)="numberOnly($event)"
+            maxlength="10"
+            formControlName="mobile_no"
+            class="form-control"
+            placeholder="Mobile Number"
+          />
+          <div class="input-error" *ngIf="getError1('mobile_no')">
+            <span>Enter Valid 10 digit number</span>
+          </div>
+        </div>
+
+        <!-- Address for Communication -->
+        <div class="form-group">
+          <label>Address for Communication <span class="e-star">*</span></label>
+          <textarea
+            formControlName="address"
+            class="form-control"
+            placeholder="Address for Communication"
+            style="height: 150px"
+          ></textarea>
+          <div class="input-error" *ngIf="getError1('address')">
+            <span>This field is required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!-- Date of Birth (DOB) -->
+        <div class="form-group">
+          <label>Date of Birth (DOB) <span class="e-star">*</span></label>
+          <input
+            type="date"
+            formControlName="dob"
+            class="form-control"
+            placeholder="Date of Birth"
+          />
+          <div class="input-error" *ngIf="getError1('dob')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group input-icon">
+          <label for="gender">Gender <span class="e-star">*</span></label>
+          <div class="select-container">
+            <select formControlName="gender" class="form-control" id="gender">
+              <option value="" disabled>Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <!-- <option value="other">Other</option> -->
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="input-error" *ngIf="getError1('gender')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Mother's Name -->
+        <div class="form-group">
+          <label>Mother's Name <span class="e-star">*</span></label>
+          <input
+            type="text"
+            formControlName="mother_name"
+            class="form-control"
+            placeholder="Mother's Name"
+          />
+          <div class="input-error" *ngIf="getError1('mother_name')">
+            <span>This field is required</span>
+          </div>
+        </div>
+
+        <!-- Email ID -->
+        <div class="form-group">
+          <label>Email ID <span class="e-star">*</span></label>
+          <input
+            type="email"
+            formControlName="emailid"
+            class="form-control"
+            placeholder="Email ID"
+          />
+          <div class="input-error" *ngIf="getError1('emailid')">
+            <span>Enter valid email ID</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Alternate Mobile Number</label>
+          <input
+            type="text"
+            (keypress)="numberOnly($event)"
+            maxlength="10"
+            formControlName="alter_mobile"
+            class="form-control"
+            placeholder="Alternate Mobile Number"
+          />
+        </div>
+        <!--IMAGE-->
+        <div class="form-group">
+          <label class="col-lg-6 form-label">Upload Photo<span class="e-star">*</span></label>
+          <div class="col-lg-6">
+            <input
+              type="file"
+              class="file-input"
+              accept=".png,.jpeg,.jpg"
+              formControlName="photo"
+              (change)="onUploadPhotoChange($event)"
+              #aadhaar
+              style="display: none"
+            />
+
+            <div class="file-upload">
+              <div class="filebtn" (click)="aadhaar.click()">
+                <span style="display: none">
+                  Upload <i class="fa fa-cloud-upload"></i
+                ></span>
+                <img
+                  *ngIf="!photo"
+                  src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                  alt="Avatar"
+                  class="avatar-image"
+                />
+              </div>
+              <div class="image-container">
+                <button
+                  *ngIf="photo"
+                  type="button"
+                  (click)="onDelete()"
+                  class="close-button"
+                >
+                  <img src="../../../../assets/image/close.svg" alt="Close" />
+                </button>
+                <div *ngIf="photos">
+                  <img
+                    [src]="getObjectURL(photo)"
+                    alt=" "
+                    class="avatar-image"
+                  />
+                </div>
+              </div>
+
+              <div *ngIf="!photos">
+                <small class="text-danger" *ngIf="maxFileSizeErrorimg">{{
+                  maxFileSizeErrorimg
+                }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group text-center">
+          <div class="text-center pt-5 pb-3">
+            <button
+              (click)="onSubmit()"
+              [class.disable-btn]="loading"
+              class="submit-btn mb-3"
+            >
+              Send OTP
+              <span
+                class="spinner-border spinner-border-sm"
+                role="status"
+                *ngIf="loading"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>
+
+<!--OTP Modal -->
+<div
+  class="modal fade"
+  id="regOtpModal"
+  tabindex="-1"
+  aria-labelledby="regOtpModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: #7f4b1e">
+          OTP
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="form-group">
+          <label>Enter OTP</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="OTP"
+            #regOtpBox
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+<!-- Sponsorship Login Button -->
+<button
+[class.disable-btn]="loading"
+type="button"
+class="modal-submit"
+(click)="sendOtp(regOtpBox.value,'sponsorship')"
+>
+Submit OTP 
+<span
+  class="spinner-border spinner-border-sm"
+  role="status"
+  *ngIf="loading"
+></span>
+</button>
+        <!-- <button
+          [class.disable-btn]="loading"
+          type="button"
+          class="modal-submit"
+          (click)="sendOtp(regOtpBox.value)"
+        >
+          Submit
+          <span
+            class="spinner-border spinner-border-sm"
+            role="status"
+            *ngIf="loading"
+          ></span>
+        </button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display: none">
+  <button
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#regOtpModal"
+    data-bs-target="#regOtpModal"
+    #openRegOtpModal
+  ></button>
+  <button
+    type="button"
+    data-bs-dismiss="modal"
+    data-bs-target="#regOtpModal"
+    data-bs-target="#regOtpModal"
+    #closeRegOtpModal
+  ></button>
+</div>
